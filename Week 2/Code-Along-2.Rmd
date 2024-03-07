@@ -1,0 +1,198 @@
+---
+title: "Code-Along-2"
+author: "Esther Kho Yining"
+date: "2024-01-23"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,echo=TRUE,eval=TRUE}
+
+# Load R packages for data science
+library(tidyverse)
+# Data in starwars data-set starwars
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Salient features of the data-set
+?starwars
+
+```
+
+```{r, out.height= "400px",out.width= "800px",echo=FALSE,eval=TRUE,fig.cap="Question 1.5"}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 2/Code-along-2/Starwars_help.jpg")
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Catch a glimpse starwars data-set
+ glimpse(starwars)
+```
+```{r,echo=TRUE,eval=TRUE}
+# Access column "height"
+ starwars$height
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Access column "mass"
+ starwars$mass
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Access column "gender"
+ starwars$gender
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Access column "gender"
+ starwars$gender
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Rows of interest
+filter_rows <- c("Luke Skywalker","R2-D2","Darth Vader") # Extract row corresponding to Luke Skywalker
+starwars %>% filter(name%in%filter_rows)
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Rows of interest
+filter_rows <- c("Luke Skywalker","R2-D2")
+# Extract rows in 'rows'
+starwars %>% filter(name%in%filter_rows) %>% pull(films)
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Number of rows in the data-set
+ nrow(starwars)
+ ncol(starwars)
+ dim(starwars)
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Invoke the library
+library(Tmisc)
+# Filter data-set I in quartet 
+quartet %>% filter(set=="I")
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Invoke the library
+library(Tmisc)
+# Filter data-set I in quartet 
+quartet %>% filter(set=="II")
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Invoke the library
+library(Tmisc)
+# Filter data-set I in quartet 
+quartet %>% filter(set=="III")
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Invoke the library
+library(Tmisc)
+# Filter data-set I in quartet 
+quartet %>% filter(set=="IV")
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Invoke the library
+library(Tmisc)
+
+grouped_quartet <- quartet %>% group_by(set)
+
+# Obtain the needed statistics
+ grouped_quartet %>%
+   summarise(
+     mean_x = mean(x),
+     mean_y = mean(y),
+     sd_x = sd(x),
+     sd_y = sd(y),
+r = cor(x, y) )
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Plot the data
+ ggplot(data=starwars)
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Plot height along x-axis
+ ggplot(data=starwars,mapping=aes(x=height))
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+# Plot mass along y-axis
+ ggplot(data=starwars,mapping=aes(x=height,y=mass))
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+ggplot(data=starwars,mapping=aes(x=height,y=mass)) +
+ geom_point()
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+ggplot(data=starwars,mapping=aes(x=height,y=mass)) + geom_point() +
+ labs(x="Height (cm)",y="Weight (Kg)")
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+ggplot(data=starwars,mapping=aes(x=height,y=mass)) +
+   geom_point() +
+   labs(x="Height (cm)",y="Weight (Kg)",
+ title="Mass versus Height")
+
+```
+
+```{r,echo=TRUE,eval=TRUE}
+ggplot(data=starwars,mapping=aes(x=height,y=mass)) +
+   geom_point() +
+   labs(x="Height (cm)",y="Weight (Kg)",
+ title="Mass versus Height",
+ caption="Source: tidyverse/ starwars dataset")
+
+```
+
+```{r,echo=TRUE,eval=F}
+# Invoke the package 
+library(shiny)
+# Run an example from the library 
+runExample("01_hello")
+```
+
+```{r, out.height= "400px",out.width= "800px",echo=FALSE,eval=TRUE,fig.cap="Question 1.5"}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 2/Code-along-2/01.jpg")
+```
+
+```{r,echo=TRUE,eval=F}
+# Invoke the package 
+library(shiny)
+# Run an example from the library 
+runExample("06_tabsets")
+```
+
+```{r, out.height= "400px",out.width= "800px",echo=FALSE,eval=TRUE,fig.cap="Question 1.5"}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 2/Code-along-2/06.jpg")
+```
+
+
