@@ -1,0 +1,31 @@
+---
+title: "Week 8 Data Story Submission"
+author: "Esther Kho Yining"
+date: "2024-03-12"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Questions
+
+### What is the topic that you have finalized? (Answer in 1 or 2 sentences)
+The topic that I have finalized is about the correlation between the popularity of Spotify songs and the elements of the music. 
+
+### What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+The data source I have obtained is for free, and originates from the following link: https://www.kaggle.com/datasets/sujaykapadnis/spotify-songs 
+
+The data set contains information on the track popularity, danceability of the music, energy of the music and liveliness of the music.
+
+```{r,eval=TRUE,echo=TRUE}
+# Data set
+library(tidyverse)
+Spotify <- read.csv("spotify_songs.csv")
+
+# First 5 rows of the data set
+head(Spotify, 5)
+```
