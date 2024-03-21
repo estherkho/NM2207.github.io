@@ -1,0 +1,93 @@
+---
+pdf_document: default
+author: "Esther Kho Yining"
+date: "2024-03-19"
+output:
+  pdf_document: default
+  html_document: default
+title: "Week-9: Code-along and Challenge"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Week 9 Code Along
+<br>
+
+## I.  
+<br>
+
+```{r, eval=FALSE,echo=TRUE}
+# Example (Slide 6)
+install.packages("shiny")
+library("shiny")
+runExample("01_hello")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/example.jpg")
+```
+
+```{r, eval=FALSE,echo=TRUE}
+# App-1: customization (Slide 13)
+runApp("App-1")
+runApp("App-1", display.mode = "showcase")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/Hello_World.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# User interface: output (Slide 17)
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/User_interface.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# User interface: headers (Slide 20)
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/headers.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# User interface: formatted text (Slide 22)
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/formatted_text.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# User interface: images (Slide 24)
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/image.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# User interface: images (Slide 25)
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/image-2.jpg")
+```
+
+## II. Challenge
+
+```{r, eval=FALSE,echo=TRUE}
+install.packages("shiny")
+library("shiny")
+runExample("04_mpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/mpg.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# Change colour of boxplot
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/colour.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# Add Images
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/cylinder.jpg")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# Add Images
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 9/gears.jpg")
+```
+

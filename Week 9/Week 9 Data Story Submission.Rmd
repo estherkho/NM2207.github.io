@@ -1,0 +1,56 @@
+---
+title: "Week 9 Data Story Submission"
+author: "Esther Kho Yining"
+date: "2024-03-19"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Week 9 
+
+### What is the topic that you have finalized? (Answer in 1 or 2 sentences)
+The topic that I have finalized is about the correlation between the popularity of Spotify songs and the elements of the music. 
+
+### What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+The data source I have obtained is for free, and originates from the following link: https://www.kaggle.com/datasets/sujaykapadnis/spotify-songs 
+
+The data set contains information on the track popularity, danceability of the music, energy of the music and liveliness of the music.
+
+```{r,eval=TRUE,echo=TRUE}
+# Data set
+library(tidyverse)
+Spotify <- read.csv("spotify_songs.csv")
+
+# First 5 rows of the data set
+head(Spotify, 5)
+```
+
+## Week 10
+
+### What is the question that you are going to answer? 
+Does the popularity of Spotify music and correlation to elements of the music suggest any insightful reflections on how people remember things?
+
+### Why is this an important question? 
+
+Despite not being able to recall the majority of events in their lives, Dr Timothy Byron and Dr Jadey O'Regan (2022) highlights that many individuals have the ability to remember a song, even if they have not heard it in a long time. This ability to remember a song may be attributed to the catchiness and the tempo of the song which allows the song to remain memorable and popular for a long time once learned. As the popularity of the song is dependent on how memoriable it is to individuals (Byron & O'Regan, 2022), understanding the elements of popular music reflects the essential components that help people to remember things.
+
+### Which rows and columns of the dataset will be used to answer this question? 
+
+I will use the columns: 
+Track popularity, Playlist Genre, Danceability, Valence, Speechiness, Tempo,  
+
+As of submitting this document, I intend to work with the first 50 row from each playlist genre as the data is ordered based on the 6 different playlist genre. 
+
+
+\newpage 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**References** 
+
+Byron, T., & O’Regan, J. (2022). _Hooks in popular music_. NSW, Australia. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Springer Nature.
