@@ -1,0 +1,88 @@
+---
+title: "Week 10 Data Story Submission"
+author: "Esther Kho Yining"
+date: "2024-03-26"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Week 8 
+
+### What is the topic that you have finalized? (Answer in 1 or 2 sentences)
+The topic that I have finalized is about the correlation between the popularity of Spotify songs and the elements of the music. 
+
+### What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+The data source I have obtained is for free, and originates from the following link: https://www.kaggle.com/datasets/sujaykapadnis/spotify-songs 
+
+The data set contains information on the track popularity, danceability of the music, energy of the music and liveliness of the music.
+
+```{r,eval=TRUE,echo=TRUE}
+# Data set
+library(tidyverse)
+Spotify <- read.csv("spotify_songs.csv")
+
+# First 5 rows of the data set
+head(Spotify, 5)
+```
+
+## Week 9
+
+### What is the question that you are going to answer? 
+Does the popularity of Spotify music and correlation to elements of the music suggest any insightful reflections on how people remember things?
+
+### Why is this an important question? 
+
+Despite not being able to recall the majority of events in their lives, Dr Timothy Byron and Dr Jadey O'Regan (2022) highlights that many individuals have the ability to remember a song, even if they have not heard it in a long time. This ability to remember a song may be attributed to the catchiness and the tempo of the song which allows the song to remain memorable and popular for a long time once learned. As the popularity of the song is dependent on how memoriable it is to individuals (Byron & O'Regan, 2022), understanding the elements of popular music reflects the essential components that help people to remember things.
+
+### Which rows and columns of the dataset will be used to answer this question? 
+
+I will use the columns: 
+Track popularity, Playlist Genre, Danceability, Valence, Speechiness, Tempo,  
+
+As of submitting this document, I intend to work with the first 50 row from each playlist genre as the data is ordered based on the 6 different playlist genre. 
+
+## Week 10
+
+### List the visualizations that you are going to use in your project (Answer: What are the variables that you are going to plot? How will it answer your larger question?)
+
+By looking at the elements of songs such as danceability and valence, I want to find out if there is a significant element that affects the popularity of the music. Through this comparison, I am to find out if there is any patterns in how people remember things. 
+
+
+### How do you plan to make it interactive? (Answer: features of ggplot2/shiny/markdown do you plan to use to make the story interactive)
+
+I will repurpose the Shiny app used in Week 9's Challenge to allow other users to plot the graphs based on the variables that they are interested in my data sets. This enables them to see the different patterns shown in the ggplot that I will create in the Shiny app
+
+```{r, eval=TRUE,echo=FALSE}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 10/SS.jpg")
+```
+
+### What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
+
+```{r,echo=FALSE}
+library(knitr)
+
+# create a data frame with some text
+df <- data.frame(
+  Topics = c("ggplot","basics of Shiny app", "Quarto website set-up","conditional outputting different variables from a curated list on Shiny"),
+  Weeks = c("2,7","8", "8 "," ")
+)
+
+# convert the data frame to a table
+table <- knitr::kable(df)
+
+# print the table
+(table)
+```
+
+\newpage 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**References** 
+
+Byron, T., & O’Regan, J. (2022). _Hooks in popular music_. NSW, Australia. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Springer Nature.
