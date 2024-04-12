@@ -1,0 +1,128 @@
+---
+title: "Week 12 Data Story Submission"
+author: "Esther Kho Yining"
+date: "2024-04-16"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Week 8 
+
+### What is the topic that you have finalized? (Answer in 1 or 2 sentences)
+The topic that I have finalized is about the correlation between the popularity of Spotify songs and the elements of the music. 
+
+### What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+The data source I have obtained is for free, and originates from the following link: https://www.kaggle.com/datasets/sujaykapadnis/spotify-songs 
+
+The data set contains information on the track popularity, danceability of the music, energy of the music and liveliness of the music.
+
+```{r,eval=TRUE,echo=TRUE}
+# Data set
+library(tidyverse)
+Spotify <- read.csv("spotify_songs.csv")
+
+# First 5 rows of the data set
+head(Spotify, 5)
+```
+
+## Week 9
+
+### What is the question that you are going to answer? 
+Does the popularity of Spotify music and correlation to elements of the music suggest any insightful reflections on how people remember things?
+
+### Why is this an important question? 
+
+Despite not being able to recall the majority of events in their lives, Dr Timothy Byron and Dr Jadey O'Regan (2022) highlights that many individuals have the ability to remember a song, even if they have not heard it in a long time. This ability to remember a song may be attributed to the catchiness and the tempo of the song which allows the song to remain memorable and popular for a long time once learned. As the popularity of the song is dependent on how memoriable it is to individuals (Byron & O'Regan, 2022), understanding the elements of popular music reflects the essential components that help people to remember things.
+
+### Which rows and columns of the dataset will be used to answer this question? 
+
+I will use the columns: 
+Track popularity, Playlist Genre, Danceability, Valence, Speechiness, Tempo,  
+
+As of submitting this document, I intend to work with the first 50 row from each playlist genre as the data is ordered based on the 6 different playlist genre. 
+
+## Week 10
+
+### List the visualizations that you are going to use in your project (Answer: What are the variables that you are going to plot? How will it answer your larger question?)
+
+By looking at the elements of songs such as danceability and valence, I want to find out if there is a significant element that affects the popularity of the music. Through this comparison, I am to find out if there is any patterns in how people remember things. 
+
+
+### How do you plan to make it interactive? (Answer: features of ggplot2/shiny/markdown do you plan to use to make the story interactive)
+
+I will repurpose the Shiny app used in Week 9's Challenge to allow other users to plot the graphs based on the variables that they are interested in my data sets. This enables them to see the different patterns shown in the ggplot that I will create in the Shiny app
+
+```{r, eval=TRUE,echo=FALSE}
+knitr::include_graphics("/Users/EstherKho/Documents/Y2S2/NM2207/Week 10/SS.jpg")
+```
+
+### What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
+
+```{r,echo=FALSE}
+library(knitr)
+
+# create a data frame with some text
+df <- data.frame(
+  Topics = c("ggplot","basics of Shiny app", "Quarto website set-up","conditional outputting different variables from a curated list on Shiny"),
+  Weeks = c("2,7","8", "8 "," ")
+)
+
+# convert the data frame to a table
+table <- knitr::kable(df)
+
+# print the table
+(table)
+```
+
+## Week 11
+
+### Update: Changes made in the dataset
+
+In order to clearly depict the correlations between the music's popularity and its elements, I have selected another dataset which originates from the following link: https://www.kaggle.com/datasets/yukawithdata/spotify-top-tracks-2023
+
+For this new dataset, I will use all the rows and the following columns: 
+Popularity, Beats.Per.Minute, Danceability, Valence, Speechiness
+
+```{r,eval=TRUE,echo=TRUE}
+# Data set
+library(tidyverse)
+songs <- read.csv("top50.csv")
+
+# First 5 rows of the data set
+head(Spotify, 5)
+```
+
+
+## Week 12
+
+### Reflect on your experience doing the project using R
+
+My experience doing the project using R was a challenging yet fulfilling one. Throughout the journey, there were moments when I encountered frustrations, particularly when my code was not functioning as expected, and I struggled to implement the desired interactive elements through the Shiny app. However, these obstacles were valuable learning experiences for me. As I seek help from my friends and the TAs, I gain a better understanding of how the code functions for the Shiny app and become more aware of the potential pitfalls when adapting the code from the given Shiny examples. Despite the challenges, I was eventually able to overcome them and felt a sense of accomplishment when I successfully produced an interactive website. This journey instilled a belief in my ability to develop my own interactive websites in the future, fueling a desire to further explore and expand my skills in R. 
+
+### What have you learned in NM2207, and how can that be helpful in your future career? Try to identify use-cases within your specialization and future industry that you might benefit by using R.
+
+In NM2207, I have acquired valuable skills in producing and manipulating datasets using functions like filter, arrange and mutate. These functions allow me to extract the specific data I need for analysis. In addition, I have also learnt how to create visualisations through ggplot and Shiny. These tools will allow me to effectively examine and present my datasets in the future.  
+
+The knowledge and skills I have gained in NM2207 will undoubtedly benefit me as a Sociology student. In Sociology, statistics are often analysed through the use of R studio in order to understand patterns in social phenomena. According to Clark (2022), Sociology often utilised the igraph function to create a network graph. While this function was not taught in NM2207, the skills learnt in NM2207 still provides me with the basic knowledge required to create such graphs. Hence, I can apply these basic knowledge to produce the necessary graphs and visualisations to analyse the statistics for my sociological research in the future with my understanding of R from NM2207. 
+
+With a keen interest in pursuing a career in the interactive media industry, the knowledge and skills acquired from NM2207 have equipped me with a valuable skill set that aligns with roles such as web developer and app developer. With the acquired knowledge of Shiny from NM2207, I am able to develop interactive website applications and dashboards, which are highly sought-after features in the industry. Such interactive elements include user-input functionalities, data-driven visualisations and personalised user experience. Thus, the knowledge gained through NM2207 have provided me with a good foundation for pursuing a career in the interactive media industry. 
+
+In conclusion, I have learnt valuable skills and knowledge in NM2207 which provides me with the basics and good foundation for my future studies and careers
+
+
+\newpage 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**References** 
+
+Byron, T., & O’Regan, J. (2022). _Hooks in popular music_. NSW, Australia. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Springer Nature.
+
+Clark, M. (2022). R & SOCIAL SCIENCE: GETTING STARTED WITH APPLIED USE OF R IN THE 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOCIAL SCIENCES. Retrieved from https://m-clark.github.io/docs/RSocialScience.pdf
